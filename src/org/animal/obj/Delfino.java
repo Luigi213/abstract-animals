@@ -19,6 +19,7 @@ public class Delfino extends Animal implements AnimalSwim{
 		System.out.println("Mangia pesce");
 		
 	}
+	@Override
 	public void nuota() {
 		System.out.println("Sto nuotando");
 	}
