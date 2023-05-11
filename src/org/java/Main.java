@@ -1,6 +1,8 @@
 package org.java;
 
 import org.animal.abs.Animal;
+import org.animal.inter.AnimalSwim;
+import org.animal.inter.AnimalVol;
 import org.animal.obj.Aquila;
 import org.animal.obj.Cane;
 import org.animal.obj.Delfino;
@@ -24,8 +26,13 @@ public class Main {
 			a.dormi();
 			a.verso();
 			a.mangia();
-			anMan.faiVolare(a);
-			anMan.faiNuotare(a);
+			if ( a instanceof AnimalVol) {
+				AnimalVol aV = (AnimalVol) a;
+				anMan.faiVolare(aV);
+			} else if(a instanceof AnimalSwim) {
+				AnimalSwim aS = (AnimalSwim) a;
+				anMan.faiNuotare(aS);
+			}
 			System.out.println("\n-----------------");
 		}
 	}
