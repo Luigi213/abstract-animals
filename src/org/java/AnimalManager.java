@@ -9,7 +9,6 @@ public class AnimalManager {
 		if ( animal instanceof AnimalVol && animal instanceof Animal) {		
 			AnimalVol a = (AnimalVol) animal;
 			a.vola();
-			System.out.println("\n-----------------");
 		} 
 	}
 	public void faiNuotare(Object animal) {
