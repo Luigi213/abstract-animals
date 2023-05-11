@@ -1,6 +1,9 @@
 package org.java;
 
+import java.util.Arrays;
+
 import org.animal.abs.Animal;
+import org.animal.inter.AnimalVol;
 import org.animal.obj.Aquila;
 import org.animal.obj.Cane;
 import org.animal.obj.Delfino;
@@ -8,24 +11,25 @@ import org.animal.obj.Passerotto;
 
 public class Main {
 	public static void main(String[] args) {
-		Animal a1 = new Cane();
-		a1.dormi();
-		a1.verso();
-		a1.mangia();
+		Cane a1 = new Cane();
 		
-		Animal a2 = new Passerotto();
-		a2.dormi();
-		a2.verso();
-		a2.mangia();
+		Passerotto a2 = new Passerotto();
 
-		Animal a3 = new Aquila();
-		a3.dormi();
-		a3.verso();
-		a3.mangia();
+		Aquila a3 = new Aquila();
 
-		Animal a4 = new Delfino();
-		a4.dormi();
-		a4.verso();
-		a4.mangia();
+		Delfino a4 = new Delfino();
+		
+		AnimalManager anMan = new AnimalManager();
+		Animal[] anArr = {a1, a2, a3, a4};
+		for(int i=0; i<anArr.length; i++) {
+			
+			Animal a = anArr[i];
+			a.dormi();
+			a.verso();
+			a.mangia();
+			anMan.faiVolare(a);
+			anMan.faiNuotare(a);
+			System.out.println("\n-----------------");
+		}
 	}
 }
