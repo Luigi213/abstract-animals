@@ -1,12 +1,11 @@
 package org.java;
 
-import org.animal.abs.Animal;
 import org.animal.inter.AnimalSwim;
 import org.animal.inter.AnimalVol;
 
 public class AnimalManager {
 	public void faiVolare(Object animal) {
-		if ( animal instanceof AnimalVol && animal instanceof Animal) {		
+		if ( animal instanceof AnimalVol) {		
 			AnimalVol a = (AnimalVol) animal;
 			a.vola();
 		} 

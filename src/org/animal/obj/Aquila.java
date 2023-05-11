@@ -19,6 +19,7 @@ public class Aquila extends Animal implements AnimalVol{
 		System.out.println("Mangia carne");
 		
 	}
+	@Override
 	public void vola() {
 		System.out.println("Sto volando");
 	}

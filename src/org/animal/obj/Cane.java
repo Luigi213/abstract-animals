@@ -1,8 +1,9 @@
 package org.animal.obj;
 
 import org.animal.abs.Animal;
+import org.animal.inter.AnimalSwim;
 
-public class Cane extends Animal{
+public class Cane extends Animal implements AnimalSwim{
 
 	@Override
 	public void dormi() {
@@ -18,5 +19,9 @@ public class Cane extends Animal{
 	public void mangia() {
 		System.out.println("Mangia carne");
 		
+	}
+	@Override
+	public void nuota() {
+		System.out.println("Sto nuotando");		
 	}
 }
