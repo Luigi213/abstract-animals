@@ -1,9 +1,6 @@
 package org.java;
 
-import java.util.Arrays;
-
 import org.animal.abs.Animal;
-import org.animal.inter.AnimalVol;
 import org.animal.obj.Aquila;
 import org.animal.obj.Cane;
 import org.animal.obj.Delfino;
